@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 
 export type ActivityType = 'expense' | 'investment';
 
@@ -42,7 +42,7 @@ export function TimeProvider({ children }: { children: ReactNode }) {
     const [totalTimeDebt, setTotalTimeDebt] = useState(127.42);
 
     // HEALTH:
-    const [futureHealthScore, setFutureHealthScore] = useState(65);
+    const [futureHealthScore] = useState(65);
 
     const [activities, setActivities] = useState<Activity[]>([]);
 
