@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# Time Debt Warrior (RPG) ⚔️🛡️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> *"The clock is a sword. Every second you don't swing it, it swings at you."*
 
-Currently, two official plugins are available:
+**Time Debt Warrior** is a gamified productivity application that transforms your relationship with time. Instead of boring charts, it treats your life as an RPG where poor time choices (doomscrolling, procrastination) accumulate **"Time Debt"** (damage) and productive habits (deep work, gym) build **XP** and restore your **Mana**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![App Screenshot](public/vite.svg) *Note: Replace with actual screenshot*
 
-## React Compiler
+## 🎮 The Concept
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This isn't just a tracker; it's a battle for your future self.
 
-## Expanding the ESLint configuration
+*   **HP (Life Capacity)**: Represents your long-term potential. Accumulating Time Debt reduces your max HP. If it hits 0, you reach "System Collapse."
+*   **Time Debt**: The enemy. Every hour wasted adds to a compounding debt that must be paid off.
+*   **Mana (Daily Energy)**: You get 24 hours of Mana every day. Spending it wisely (Investments) vs. poorly (Expenses) determines your fate.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Key Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 1. 📊 Status Dashboard (Two-Column Layout)
+*   **Identity Anchor**: A persistent left column featuring your pixel-art avatar (Warrior), Level, and visual stats.
+*   **Data Stream**: A rich, scrolling right column displaying your real-time HP, XP, and active Debuffs (e.g., "Procrastination Aura").
+*   **Habitica-Inspired Design**: Focuses on data density without clutter, separating "Identity" from "Content."
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 2. 👹 Boss Encounter (Analytics)
+*   **Chronos, The-Debt Eater**: Your debt is visualized as a massive World Boss.
+*   **Corruption Metrics**: Track how much of your "Soul" (HP) has been corrupted by the boss.
+*   **Void Prophecies**: Algorithmic warnings about where you'll be in 6 months if you don't change your habits.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 3. 📜 Quest Log & History
+*   **Daily Quests**: Choose your actions (e.g., "Scroll Reels" -> +Debt, "Deep Work" -> +XP).
+*   **Immediate Feedback**: Get instant "Corrupted" or "Purified" notifications based on your choices.
+*   **Ledger**: A complete history of your time transactions.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 4. 🕯️ Purification Temple
+*   **Pay Your Debts**: Special actions (Wake Early, Gym, Meditation) that actively reduce your accumulated Time Debt.
+*   **Ritual Mechanics**: "Transmute" physical effort into time wealth.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*   **Frontend**: React 18 (Vite)
+*   **Language**: TypeScript
+*   **Styling**: 
+    *   **Tailwind CSS** (Utility-first)
+    *   **Vanilla CSS Variables** (Theming & RPG Palette)
+    *   **Pixel Art Typography** (`Press Start 2P`)
+*   **Animations**: Framer Motion (Smooth page transitions & bar fills)
+*   **State Management**: React Context API (`TimeContext`)
+*   **Storage**: LocalStorage (Persistence)
+
+## 🚀 Getting Started
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/sankalp771/time-debt-warrior.git
+    cd time-debt-warrior
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for Production**
+    ```bash
+    npm run build
+    ```
+
+## 🎨 Design Philosophy
+
+*   **Pixel Perfect**: Uses a strict 8-bit aesthetic for fonts and borders.
+*   **Dark Mode Only**: Designed for focus and immersion (colors: `#241c30`, `#34315e`).
+*   **Feedback Loops**: Every interaction should feel weighty. Animation is used to deliver dopamine (or regret).
+
+## 🤝 Contributing
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+---
+
+*Built with failure and caffeine by [Sankalp].*
