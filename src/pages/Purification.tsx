@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTime } from '../context/TimeContext';
 import { Sun, Dumbbell, Brain, Moon, Sparkles, Heart } from 'lucide-react';
 
+
 const cn = (...classes: (string | undefined | null | false)[]) => classes.filter(Boolean).join(' ');
 
 const ACTIONS = [
@@ -25,12 +26,14 @@ export function Purification() {
     return (
         <div className="app-shell border-b-4 border-black">
             <aside className="avatar-panel bg-[#27ae60]/10 border-r-4 border-black group">
-                <div className="w-24 h-24 bg-black/40 border-4 border-black flex items-center justify-center text-[var(--color-green)] shadow-[4px_4px_0px_#000] transition-transform group-hover:scale-110">
-                    <Heart size={40} className="animate-pulse" />
+                <div className="relative group/avatar">
+                    <img src="/purge-page-icon.png" alt="Purge Icon" className="avatar-image bg-white" />
                 </div>
-                <div className="mt-8 text-center">
-                    <h2 className="font-pixel text-[10px] text-white">TEMPLE</h2>
-                    <p className="font-pixel text-[6px] text-[var(--color-green)] mt-2">RESTORATION RITES</p>
+                <div className="profile-section">
+                    <h2 className="profile-title">TEMPLE</h2>
+                    <div className="profile-meta" style={{ color: 'var(--color-green)', opacity: 1 }}>
+                        <span>RESTORATION RITES</span>
+                    </div>
                 </div>
             </aside>
 

@@ -2,18 +2,22 @@ import { useTime } from '../context/TimeContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Clock, BookText } from 'lucide-react';
 
+
 export function History() {
     const { activities } = useTime();
 
     return (
         <div className="app-shell border-b-4 border-black">
             <aside className="avatar-panel bg-[#2d3436] border-r-4 border-black">
-                <div className="w-24 h-24 bg-black/40 border-4 border-black flex items-center justify-center text-[var(--color-blue)] shadow-[4px_4px_0px_#000]">
-                    <BookText size={40} className="animate-pulse" />
+                <div className="relative group/avatar">
+                    <img src="/log-page-icon.png" alt="Log Icon" className="avatar-image bg-white" />
                 </div>
-                <div className="mt-8 text-center">
-                    <h2 className="font-pixel text-[10px] text-white">CHRONICLE</h2>
-                    <p className="font-pixel text-[6px] text-[var(--text-muted)] mt-2">THE DEBT RECORD</p>
+                <div className="profile-section">
+                    <h2 className="profile-title">CHRONICLE</h2>
+                    <div className="profile-meta" style={{ color: 'var(--color-blue)', opacity: 1 }}>
+                        <Shield size={12} />
+                        <span>THE DEBT RECORD</span>
+                    </div>
                 </div>
             </aside>
 

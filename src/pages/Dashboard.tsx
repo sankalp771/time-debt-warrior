@@ -18,13 +18,17 @@ export function Dashboard() {
                         alt="Warrior"
                         className="avatar-image"
                     />
-                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-black border-2 border-[var(--color-yellow)] text-[8px] font-pixel px-3 py-1 text-[var(--color-yellow)] shadow-lg">
+                    <div className="level-badge">
                         LVL 24
                     </div>
                 </div>
-                <div className="mt-12 text-center space-y-2">
-                    <h2 className="font-pixel text-[10px] text-white">TIME WARRIOR</h2>
-                    <p className="font-pixel text-[6px] text-[var(--text-muted)] tracking-widest uppercase">ID: 8842 / RECRUIT</p>
+                <div className="profile-section">
+                    <h2 className="profile-title">
+                        TIME<br />WARRIOR
+                    </h2>
+                    <div className="profile-meta">
+                        <span>ID: 8842 / RECRUIT</span>
+                    </div>
                 </div>
             </aside>
 

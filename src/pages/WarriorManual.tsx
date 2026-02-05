@@ -1,15 +1,18 @@
 import { Info, HelpCircle } from 'lucide-react';
 
+
 export function WarriorManual() {
     return (
         <div className="app-shell border-b-4 border-black">
             <aside className="avatar-panel bg-[#4e4a67]/30 border-r-4 border-black">
-                <div className="w-24 h-24 bg-black/40 border-4 border-black flex items-center justify-center text-[var(--color-yellow)] shadow-[4px_4px_0px_#000]">
-                    <HelpCircle size={40} className="animate-spin-slow" />
+                <div className="relative group/avatar">
+                    <img src="/manual-page-icon.png" alt="Manual Icon" className="avatar-image bg-white" />
                 </div>
-                <div className="mt-8 text-center px-4">
-                    <h2 className="font-pixel text-[10px] text-white">MANUAL</h2>
-                    <p className="font-pixel text-[6px] text-white/40 mt-2 leading-relaxed uppercase">The Laws of Chronos</p>
+                <div className="profile-section">
+                    <h2 className="profile-title">MANUAL</h2>
+                    <div className="profile-meta">
+                        <span>THE LAWS OF CHRONOS</span>
+                    </div>
                 </div>
             </aside>
 
