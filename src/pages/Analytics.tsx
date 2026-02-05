@@ -57,7 +57,7 @@ export function Analytics() {
 
                 <div className="w-full max-w-[160px] mt-10 space-y-3">
                     <div className="flex justify-between font-pixel text-[6px] text-[var(--color-red)]">
-                        <span>CORRUPTION</span>
+                        <span>CORRUPTION - </span>
                         <span>{Math.round(bossHpPercent)}%</span>
                     </div>
                     <div className="rpg-bar h-2 border-black/60 bg-black">
@@ -85,14 +85,14 @@ export function Analytics() {
                             <div className="space-y-6">
                                 <div className="space-y-2">
                                     <div className="flex justify-between font-pixel text-[8px] text-[var(--text-muted)]">
-                                        <span>CURRENT STRENGTH</span>
-                                        <span className="text-white">{totalTimeDebt.toFixed(2)}h</span>
+                                        <span>CURRENT STRENGTH: </span>
+                                        <span className="text-white">{totalTimeDebt.toFixed(2)} h</span>
                                     </div>
                                     <div className="h-1 bg-gray-800 w-full" />
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between font-pixel text-[8px] text-[var(--text-muted)]">
-                                        <span>CORRUPTION RATE</span>
+                                        <span>CORRUPTION RATE: </span>
                                         <span className="text-[var(--color-red)]">0.05% / CYCLE</span>
                                     </div>
                                     <div className="h-1 bg-gray-800 w-full" />
