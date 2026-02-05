@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTime } from '../context/TimeContext';
 import { Smartphone, Tv, Moon, Dumbbell, Brain, BookOpen, Clock, Sword } from 'lucide-react';
 
+
 const cn = (...classes: (string | undefined | null | false)[]) => classes.filter(Boolean).join(' ');
 
 type ActivityOption = {
@@ -58,12 +59,17 @@ export function Quests() {
     return (
         <div className="app-shell border-b-4 border-black">
             <aside className="avatar-panel bg-[#212b36] border-r-4 border-black">
-                <div className="w-24 h-24 bg-black/40 border-4 border-black flex items-center justify-center text-[var(--color-yellow)] shadow-[4px_4px_0px_#000]">
-                    <Sword size={40} className="animate-pulse" />
+                <div className="relative group/avatar">
+                    <img src="/quest-page-icon.png" alt="Quest Icon" className="avatar-image bg-white" />
                 </div>
-                <div className="mt-8 text-center">
-                    <h2 className="font-pixel text-[10px] text-white">ACTIVE DUTY</h2>
-                    <p className="font-pixel text-[6px] text-[var(--text-muted)] mt-2">CHOOSE YOUR FATE</p>
+                <div className="profile-section">
+                    <h2 className="profile-title">
+                        ACTIVE<br />DUTY
+                    </h2>
+                    <div className="profile-meta" style={{ color: 'var(--color-yellow)', opacity: 1 }}>
+                        <Clock size={12} />
+                        <span>CHOOSE YOUR FATE</span>
+                    </div>
                 </div>
             </aside>
 
