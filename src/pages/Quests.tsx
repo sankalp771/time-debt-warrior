@@ -98,9 +98,9 @@ export function Quests() {
                 <div className="pixel-box bg-[var(--bg-card)] mt-12 p-8">
                     <label className="flex items-center justify-between mb-8 font-pixel text-[10px]">
                         <span className="flex items-center gap-2">
-                            <Clock className="w-4 h-4" /> QUEST DURATION
+                            <Clock className="w-4 h-4" /> QUEST DURATION:
                         </span>
-                        <span className="text-[var(--color-yellow)] font-pixel text-lg">{duration}H</span>
+                        <span className="text-[var(--color-yellow)] font-pixel text-lg"> {duration} H </span>
                     </label>
                     <input
                         type="range"

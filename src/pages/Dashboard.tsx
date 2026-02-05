@@ -40,7 +40,7 @@ export function Dashboard() {
                     <div className="pixel-box bg-[var(--bg-card)] p-8 space-y-8">
                         <div className="space-y-4">
                             <div className="flex justify-between font-pixel text-[10px]">
-                                <span>LIFE CAPACITY (HEALTH)</span>
+                                <span>LIFE CAPACITY (HEALTH): </span>
                                 <span>{Math.round(healthPercent)}%</span>
                             </div>
                             <div className="rpg-bar h-6 border-4 border-black">
@@ -50,7 +50,7 @@ export function Dashboard() {
                                     transition={{ type: 'spring', damping: 20 }}
                                 />
                                 <div className="absolute inset-0 flex items-center justify-center font-pixel text-[8px] text-white drop-shadow-md">
-                                    DEBT: {totalTimeDebt.toFixed(2)}h
+                                    DEBT: {totalTimeDebt.toFixed(2)} h
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ export function Dashboard() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="space-y-4">
                                 <div className="flex justify-between font-pixel text-[8px] text-[var(--text-muted)]">
-                                    <span>EXPERIENCE</span>
+                                    <span>EXPERIENCE: </span>
                                     <span>{futureHealthScore}/100</span>
                                 </div>
                                 <div className="rpg-bar h-4">
@@ -71,8 +71,8 @@ export function Dashboard() {
 
                             <div className="space-y-4">
                                 <div className="flex justify-between font-pixel text-[8px] text-[var(--text-muted)]">
-                                    <span>MANA</span>
-                                    <span>{availableTimeToday.toFixed(2)}h</span>
+                                    <span>MANA: </span>
+                                    <span>{availableTimeToday.toFixed(2)} h</span>
                                 </div>
                                 <div className="rpg-bar h-4">
                                     <motion.div
